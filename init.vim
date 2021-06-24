@@ -18,6 +18,8 @@ Plug 'tpope/vim-surround'
 Plug 'rlue/vim-barbaric'
 Plug 'luochen1990/rainbow'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 source ~/.config/nvim/vim-configs/coc-extensions.vim
@@ -51,8 +53,16 @@ Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-haml'
 
+" Ruby 
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-haml'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-endwise'
+
 " Golang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Rust
 Plug 'rust-lang/rust.vim'
