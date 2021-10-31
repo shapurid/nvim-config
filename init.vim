@@ -8,7 +8,19 @@ Plug 'preservim/nerdtree' |
 Plug 'ryanoasis/vim-devicons'
 Plug 'jistr/vim-nerdtree-tabs'
 
-Plug 'w0rp/ale'
+" MUST BE
+" Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-unimpaired'
+" Plug 'tpope/vim-repeat'
+" Plug 'Raimondi/delimitMate'
+
+" Plug 'AndrewRadev/splitjoin.vim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'windwp/nvim-spectre'
+" Plug 'jpalardy/vim-slime', {'branch': 'main'}
+Plug 'dyng/ctrlsf.vim'
+Plug 'dense-analysis/ale'
 Plug 'preservim/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'ntpeters/vim-better-whitespace'
@@ -17,20 +29,27 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'rlue/vim-barbaric'
 Plug 'luochen1990/rainbow'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-projectionist'
+Plug 'vim-scripts/RltvNmbr.vim'
+autocmd VimEnter * RltvNmbr
+Plug 'tpope/vim-endwise'
+
+Plug 'kassio/neoterm'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 source ~/.config/nvim/vim-configs/coc-extensions.vim
-
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Multi-cursors
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'wellle/targets.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'puremourning/vimspector'
+
+" DB
+Plug 'tpope/vim-dadbod'
 
 " JSON
 Plug 'elzr/vim-json'
@@ -46,6 +65,7 @@ Plug 'leafgarland/typescript-vim'
 " PHP
 Plug 'noahfrederick/vim-composer'
 Plug 'noahfrederick/vim-laravel'
+Plug 'qbbr/vim-symfony'
 Plug 'jwalton512/vim-blade'
 
 " HTML5/CSS/SASS
@@ -59,16 +79,21 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-haml'
 Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-endwise'
-
-" Golang
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Rust
 Plug 'rust-lang/rust.vim'
 
 " Dockerfile
 Plug 'ekalinin/dockerfile.vim'
+
+" C/C++
+Plug 'bfrg/vim-cpp-modern'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'vhdirk/vim-cmake'
+Plug 'vim-syntastic/syntastic'
+let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_c_checkers = ['cpplint']
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
 
 call plug#end()
 
@@ -81,7 +106,7 @@ set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNO
 set encoding=UTF-8
 set mouse=a
 set number
-set relativenumber
+" set relativenumber
 set hlsearch
 set ignorecase
 set signcolumn=yes
