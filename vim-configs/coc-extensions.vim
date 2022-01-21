@@ -9,7 +9,7 @@ let g:coc_global_extensions = [
       \ 'coc-lists',
       \ 'coc-xml',
       \ 'coc-phpls',
-      \ 'coc-blade-formatter',
+      \ 'coc-blade',
       \ 'coc-swagger',
       \ 'coc-sh',
       \ 'coc-css',

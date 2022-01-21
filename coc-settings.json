@@ -13,6 +13,16 @@
       "command": "docker-langserver",
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
+    },
+    "racket": {
+      "command": "racket",
+      "args": [
+        "--lib",
+        "racket-langserver"
+      ],
+      "filetypes": [
+        "scheme"
+      ]
     }
   },
   "coc.preferences.extensionUpdateCheck": "weekly",

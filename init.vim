@@ -1,4 +1,5 @@
 let mapleader = "\<Space>"
+let maplocalleader=","
 
 call plug#begin('~/.vim/plugged')
 
@@ -82,6 +83,11 @@ Plug 'slim-template/vim-slim'
 
 " Rust
 Plug 'rust-lang/rust.vim'
+
+" Racket/Clojure
+Plug 'Olical/conjure'
+Plug 'wlangstroth/vim-racket'
+let g:syntastic_enable_racket_racket_checker = 1
 
 " Dockerfile
 Plug 'ekalinin/dockerfile.vim'
