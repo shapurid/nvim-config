@@ -1,3 +1,6 @@
+if exists('g:vscode')
+else
+
 let mapleader = "\<Space>"
 let maplocalleader=","
 
@@ -34,9 +37,10 @@ Plug 'luochen1990/rainbow'
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-projectionist'
-Plug 'vim-scripts/RltvNmbr.vim'
-autocmd VimEnter * RltvNmbr
+" Plug 'vim-scripts/RltvNmbr.vim'
+" autocmd VimEnter,BufReadPre,FileReadPre * RltvNmbr
 Plug 'tpope/vim-endwise'
+Plug 'wincent/command-t', { 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' }
 
 Plug 'kassio/neoterm'
 
@@ -74,7 +78,7 @@ Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-haml'
 
-" Ruby 
+" Ruby
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
@@ -156,3 +160,5 @@ source ~/.config/nvim/vim-configs/vim-jsx.vim
 source ~/.config/nvim/vim-configs/vim-javascript.vim
 source ~/.config/nvim/vim-configs/coc.vim
 source ~/.config/nvim/vim-configs/coc-plugins.vim
+
+endif
