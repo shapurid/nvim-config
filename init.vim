@@ -6,6 +6,13 @@ let maplocalleader=","
 
 call plug#begin('~/.vim/plugged')
 
+" Color schemes
+Plug 'sts10/vim-pink-moon'
+Plug 'gilgigilgil/anderson.vim'
+Plug 'keith/parsec.vim'
+Plug 'rainglow/vim'
+Plug 'tomasiser/vim-code-dark'
+
 " NerdTree config plugins
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -88,6 +95,9 @@ Plug 'slim-template/vim-slim'
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
 " Racket/Clojure
 Plug 'Olical/conjure'
 Plug 'wlangstroth/vim-racket'
@@ -112,6 +122,7 @@ filetype plugin on
 
 " https://github.com/vim/vim/blob/master/runtime/doc/russian.txt
 " Enable hotkeys for Russian layout
+set expandtab
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set encoding=UTF-8
 set mouse=a
@@ -122,7 +133,9 @@ set ignorecase
 set signcolumn=yes
 set scrolloff=3
 set clipboard+=unnamedplus
-
+set termguicolors
+colorscheme codedark
+set background=dark
 " Keep undo history across sessions, by storing in file.
 "silent !mkdir /tmp/.vim/backups > /dev/null 2>&1
 set undodir=/tmp/.vim/backups

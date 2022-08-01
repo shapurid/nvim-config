@@ -1,4 +1,5 @@
 let g:coc_global_extensions = [
+      \ 'coc-elixir',
       \ 'coc-solargraph',
       \ 'coc-cspell-dicts',
       \ 'coc-spell-checker',

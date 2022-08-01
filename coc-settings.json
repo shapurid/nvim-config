@@ -1,18 +1,28 @@
 {
   "suggest.enablePreview": true,
-  "suggest.enablePreselect": false,
+  "suggest.enablePreselect": false, 
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "languageserver": {
     "terraform": {
       "command": "terraform-ls",
-      "args": ["serve"],
-      "filetypes": ["terraform", "tf"],
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
       "initializationOptions": {},
       "settings": {}
     },
     "dockerfile": {
       "command": "docker-langserver",
-      "filetypes": ["dockerfile"],
-      "args": ["--stdio"]
+      "filetypes": [
+        "dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
     },
     "racket": {
       "command": "racket",
@@ -23,6 +33,90 @@
       "filetypes": [
         "scheme"
       ]
+    },
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
+      "filetypes": [
+        "haskell",
+        "lhaskell"
+      ]
+    },
+    "python": {
+      "command": "python",
+      "args": [
+        "-mpyls",
+        "-vv",
+        "--log-file",
+        "/tmp/lsp_python.log"
+      ],
+      "trace.server": "verbose",
+      "filetypes": [
+        "python"
+      ],
+      "settings": {
+        "pyls": {
+          "enable": true,
+          "trace": {
+            "server": "verbose"
+          },
+          "commandPath": "",
+          "configurationSources": [
+            "pycodestyle"
+          ],
+          "plugins": {
+            "jedi_completion": {
+              "enabled": true
+            },
+            "jedi_hover": {
+              "enabled": true
+            },
+            "jedi_references": {
+              "enabled": true
+            },
+            "jedi_signature_help": {
+              "enabled": true
+            },
+            "jedi_symbols": {
+              "enabled": true,
+              "all_scopes": true
+            },
+            "mccabe": {
+              "enabled": true,
+              "threshold": 15
+            },
+            "preload": {
+              "enabled": true
+            },
+            "pycodestyle": {
+              "enabled": true
+            },
+            "pydocstyle": {
+              "enabled": false,
+              "match": "(?!test_).*\\.py",
+              "matchDir": "[^\\.].*"
+            },
+            "pyflakes": {
+              "enabled": true
+            },
+            "rope_completion": {
+              "enabled": true
+            },
+            "yapf": {
+              "enabled": true
+            }
+          }
+        }
+      }
     }
   },
   "coc.preferences.extensionUpdateCheck": "weekly",
@@ -31,16 +125,31 @@
   "solargraph.diagnostics": true,
   "diagnostic-languageserver.mergeConfig": true,
   "diagnostic-languageserver.filetypes": {
-    "php": ["phpcs", "phpstan"]
+    "php": [
+      "phpcs",
+      "phpstan"
+    ]
   },
-  "cSpellExt.enableDictionaries": ["russian"],
-  "cSpell.enabledLanguageIds": ["markdown", "plaintext", "yml", "php", "node", "python", "html", "css"],
+  "cSpellExt.enableDictionaries": [
+    "russian"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "markdown",
+    "plaintext",
+    "yml",
+    "php",
+    "node",
+    "python",
+    "html",
+    "css"
+  ],
   "cSpell.language": "en,ru",
   "prettier.printWidth": 120,
   "prettier.trailingComma": "all",
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "prettier.singleQuote": true,
+  "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
   "markdownlint.config": {
     "line_length": false,
     "first-line-h1": false
